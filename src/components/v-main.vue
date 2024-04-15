@@ -2,11 +2,11 @@
   <div class="wrapper">
     <div class="wrapper-input">
       <div class="input_1">
-        <input type="range" v-model="count_1" v-on:change="chetNEchet" />
+        <input type="range" v-model="count_1" />
         <p>{{ count_1 }}</p>
       </div>
       <div class="input_2">
-        <input type="range" v-model="count_2" v-on:change="chetNEchet" />
+        <input type="range" v-model="count_2" />
         <p>{{ count_2 }}</p>
       </div>
     </div>
@@ -33,6 +33,14 @@ export default {
       } else {
         this.answer = "не чёт";
       }
+    },
+  },
+  watch: {
+    count_1() {
+      this.chetNEchet;
+    },
+    count_2() {
+      this.chetNEchet;
     },
   },
 };
