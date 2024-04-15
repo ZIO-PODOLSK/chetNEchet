@@ -35,12 +35,19 @@ export default {
       }
     },
   },
+
   watch: {
-    count_1() {
-      this.chetNEchet;
+    count_1: {
+      handler() {
+        this.chetNEchet;
+      },
+      immediate: true,
     },
-    count_2() {
-      this.chetNEchet;
+    count_2: {
+      handler() {
+        this.chetNEchet;
+      },
+      immediate: true,
     },
   },
 };
