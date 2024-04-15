@@ -2,11 +2,11 @@
   <div class="wrapper">
     <div class="wrapper-input">
       <div class="input_1">
-        <input type="range" v-model="count_1" />
+        <input class="input_value" type="range" v-model="count_1" />
         <p>{{ count_1 }}</p>
       </div>
       <div class="input_2">
-        <input type="range" v-model="count_2" />
+        <input class="input_value" type="range" v-model="count_2" />
         <p>{{ count_2 }}</p>
       </div>
     </div>
@@ -54,6 +54,10 @@ export default {
 </script>
 
 <style>
+.input_value{
+  width: 400px;
+}
+
 .input_1,
 .input_2 {
   display: flex;
@@ -64,7 +68,7 @@ export default {
   margin-bottom: 20px;
   border: 1px solid black;
   border-radius: 10px;
-  max-width: 200px;
+  width: 500px;
   padding: 10px 10px 10px 10px;
 }
 .wrapper-info {
