@@ -6,7 +6,7 @@
         <p>{{ count_1 }}</p>
       </div>
       <div class="input_2">
-        <input type="range" v-model="count_2" v-on:change="chetNEchet"/>
+        <input type="range" v-model="count_2" v-on:change="chetNEchet" />
         <p>{{ count_2 }}</p>
       </div>
     </div>
@@ -23,19 +23,18 @@ export default {
     return {
       count_1: 50,
       count_2: 50,
-      answer: "",
+      answer: "null",
     };
   },
-  computed:{
-    chetNEchet(){
-      if (this.count_1%2 == 0 && this.count_2%2 == 0){
-        this.answer = "чёт"
+  computed: {
+    chetNEchet() {
+      if (this.count_1 % 2 == 0 && this.count_2 % 2 == 0) {
+        this.answer = "чёт";
+      } else {
+        this.answer = "не чёт";
       }
-      else{
-        this.answer = "не чёт"
-      }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -67,6 +66,7 @@ export default {
 }
 .wrapper {
   display: flex;
+  justify-content: center;
 }
 .wrapper-info_text {
   font-size: 30px;
